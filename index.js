@@ -18,7 +18,7 @@ const CAPTAIN_ROLE_ID = "1488685991626674266";
 const LOG_CHANNEL_ID = "1488776740758098001";
 const SCORES_CHANNEL_ID = "1488411823383515277";
 const STANDINGS_CHANNEL_ID = "1488773240905011210";
-const DATA_FILE = path.join(__dirname, "data.json");
+const DATA_FILE = path.join("/app/data", "data.json");
 
 // ─── DATA LAYER ───
 function loadData() {
