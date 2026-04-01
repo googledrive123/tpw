@@ -586,6 +586,7 @@ async function cmdForcerelease(interaction, data) {
 // ═══════════════════════════════════════
 
 async function cmdSign(interaction, data) {
+  data = loadData();
   const userCrew = findUserCrew(data, interaction.user.id);
 
   if (!userCrew) {
