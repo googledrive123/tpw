@@ -13,7 +13,7 @@ const path = require("path");
 
 // ─── CONFIG ───
 const TOKEN = process.env.BOT_TOKEN;
-const STAFF_ROLE_ID = "1488409640701136968";
+const STAFF_ROLE_IDS = ["1488409640701136968", "1488765624703258634"];
 const CAPTAIN_ROLE_ID = "1488685991626674266";
 const LOG_CHANNEL_ID = "1488776740758098001";
 const SCORES_CHANNEL_ID = "1488411823383515277";
@@ -39,7 +39,7 @@ function saveData(data) {
 
 // ─── HELPERS ───
 function isStaff(member) {
-  return member.roles.cache.has(STAFF_ROLE_ID);
+  return STAFF_ROLE_IDS.some(id => member.roles.cache.has(id));
 }
 
 function findUserCrew(data, userId) {
