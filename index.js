@@ -109,7 +109,7 @@ async function logTransaction(guild, type, fields) {
       .setColor(tx.color)
       .setTitle(tx.label)
       .setTimestamp()
-      .setFooter({ text: "TFW Transactions" });
+      .setFooter({ text: "TPW Transactions" });
 
     for (const [name, value] of Object.entries(fields)) {
       logEmbed.addFields({ name, value: String(value), inline: true });
@@ -200,7 +200,7 @@ function buildStandingsEmbed(data, guild) {
     .setDescription(desc)
     .setColor(0x5865f2)
     .setTimestamp()
-    .setFooter({ text: "TFW Crew Wars" });
+    .setFooter({ text: "TPW Crew Wars" });
 }
 
 async function updateStandingsMessage(guild, data) {
@@ -245,7 +245,7 @@ const client = new Client({
 
 client.once("ready", () => {
   console.log(`${client.user.tag} is online!`);
-  client.user.setActivity("TFW Crew Wars", { type: 3 });
+  client.user.setActivity("TPW Crew Wars", { type: 3 });
 });
 
 // ─── SCORE LISTENER ───
@@ -892,7 +892,7 @@ async function cmdStartPeriod(interaction, data) {
       .setDescription(`All records have been reset to 0-0. Good luck to all crews.`)
       .setColor(0x5865f2)
       .setTimestamp()
-      .setFooter({ text: "TFW Crew Wars" });
+      .setFooter({ text: "TPW Crew Wars" });
 
     await scoresChannel.send({ embeds: [announcementEmbed] });
   }
