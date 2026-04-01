@@ -56,7 +56,7 @@ function findUserCrew(data, userId) {
 }
 
 function getUserRank(crew, userId) {
-  if (crew.ownerId === userId) return "Owner";
+  if (crew.ownerId === userId) return "owner";
   if (crew.captains.includes(userId)) return "captain";
   if (crew.players.includes(userId)) return "player";
   return null;
